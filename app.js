@@ -9,14 +9,15 @@ const cookieParser = require('cookie-parser');
 const hbs = require('hbs');
 const mongoose = require('mongoose');
 
+const app = express();
+
 // Set up the database
 require('./configs/db.config');
+require('./configs/session.config')(app);
 
 // Routers
 const indexRouter = require('./routes/index.routes');
 const authRouter = require('./routes/auth.routes');
-
-const app = express();
 
 // Express View engine setup
 

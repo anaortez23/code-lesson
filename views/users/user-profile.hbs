@@ -1,1 +1,7 @@
 <p>This is your profile page my friend!</p>
+
+{{#if userInSession}}
+<h3> Welcome, {{userInSession.username}}</h3>
+{{else}}
+<b> Sorry not user in session</b>
+{{/if}}
